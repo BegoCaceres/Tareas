@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//para usar NgModel
+import { FormsModule } from '@angular/forms';
+
+//componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TareasComponent } from './components/tareas/tareas.component';
@@ -12,7 +16,8 @@ import { TareasComponent } from './components/tareas/tareas.component';
     TareasComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+/*alineamos al centro los textos de los input*/
+input{
+    text-align: center;
+}
+
+/*ponemos mas grande el tamaño de letra*/
+.form-control-lg {
+    font-size:1.8rem;
+}

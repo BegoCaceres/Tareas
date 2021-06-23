@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+/*añadimos un fondo descargado de la pagina https://pixabay.com/*/
+body{
+background-image: url('./assets/img/fondo.jpg');
+}
