@@ -31,5 +31,17 @@ export class TareasComponent implements OnInit {
     //Reset el input
     this.nombreTarea = "";
   }
+  
+  //Eliminamos de la lista de tareas segun indice
+  eliminarTarea(indice:number):void{
+    //splice te borra donde le marques el indice el numero de elementos en 
+    //este caso eliminaria 1
+    this.listTareas.splice(indice,1)
+  }
+
+  actualizarTarea(indice:number, tarea:Tarea){
+    this.listTareas[indice].estado = !tarea.estado;
+
+  }
 
 }

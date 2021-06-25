@@ -7,3 +7,8 @@ input{
 .form-control-lg {
     font-size:1.8rem;
 }
+
+/*para que salga la mano cuando pasamos por encima de los iconoes*/
+.cursor{
+    cursor: pointer;
+}

@@ -13,10 +13,23 @@
             <div *ngIf="listTareas.length === 0" class="card p-2">
                 <h6>No hay tareas para mostrar</h6>
             </div>
+            <!--d-flex justify-content-between alinea el boton seleccionar a la izq la tarea al centro
+            y el boton eliminar a la derecha(buscado en flex de bootstrap)-->
             <ul class="list-group">
                 <!--recorremos la lista para mostrar las tareas-->
-                <li *ngFor="let tarea of listTareas" class="list-group-item">
+                <li *ngFor="let tarea of listTareas; let i=index" class="list-group-item d-flex justify-content-between">
+                    <span class="cursor">
+                        <!--cuando estado sea verdadero aplicamos check azul con la clase de bootstrap info
+                            cuando estado sea verdadero aplicamos el check-circle que seria marcado de Font Awesome-->
+                        <i [class.text-info]="tarea.estado" [ngClass]="tarea.estado ? 'fas fa-check-circle' : 'far fa-circle'" (click)="actualizarTarea(i,tarea)"></i>
+                        <!--<i class="fas fa-check-circle"></i>
+                        <i class="far fa-circle" (click)="actualizarTarea(i,tarea)"></i>-->
+                    </span>
                     {{tarea.nombre}}
+                    <span class="cursor">
+                        <!--text-danger cambia el color a rojo-->
+                        <i class="far fa-trash-alt text-danger" (click)="eliminarTarea(i)"></i>
+                    </span>
                 </li>
             </ul>
         </div>
